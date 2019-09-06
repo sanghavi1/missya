@@ -1,0 +1,15 @@
+{
+  "name": "missya",
+  "version": "1.0.0",
+  "description": "Creating miss ya button",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@sendgrid/mail": "^6.4.0",
+    "commander": "^3.0.1"
+  }
+}
