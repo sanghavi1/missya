@@ -15,5 +15,14 @@
   },
   "engines": {
     "node": "10.x"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanghavi1/missya.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sanghavi1/missya/issues"
+  },
+  "homepage": "https://github.com/sanghavi1/missya#readme"
 }
