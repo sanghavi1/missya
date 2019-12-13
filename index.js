@@ -12,16 +12,15 @@ var request = sg.emptyRequest({
   body: mail.toJSON(),
 });
 
-sg.API(request, function(error, response) {
-  console.log(response.statusCode);
-  console.log(response.body);
-  console.log(response.headers);
-});
-
 const http = require('http');
 const PORT = process.env.PORT || 5000;
 
 const server = http.createServer((req, res) => {
+	sg.API(request, function(error, response) {
+  console.log(response.statusCode);
+  console.log(response.body);
+  console.log(response.headers);
+});
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
   res.end('Hello World\n',);
