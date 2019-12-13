@@ -1,3 +1,7 @@
+/* Creator: Yash Sanghavi  */
+const express = require('express')
+const app = express()
+
 var helper = require('sendgrid').mail;
 var from_email = new helper.Email('test@example.com');
 var to_email = new helper.Email('ysanghavi1@gmail.com');
@@ -15,16 +19,16 @@ var request = sg.emptyRequest({
 const http = require('http');
 const PORT = process.env.PORT || 5000;
 
-const server = http.createServer((req, res) => {
+app.get('/', (req, res) => {
 	sg.API(request, function(error, response) {
-  console.log(response.statusCode);
-  console.log(response.body);
-  console.log(response.headers);
-});
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World\n',);
-});
-server.listen(PORT, '0.0.0.0', () => {
-  console.log(`Server running on ${PORT}/`);
-});
+		console.log(response.statusCode);
+		console.log(response.body);
+		console.log(response.headers);
+	});
+	res.send('Hello World!')}
+);
+
+app.listen(PORT, () => console.log(`Example app listening on port ${PORT}!`))
+
+
+

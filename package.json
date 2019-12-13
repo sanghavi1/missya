@@ -10,8 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "sendgrid": "^4.2.0",
-    "commander": "^3.0.1"
+    "commander": "^3.0.1",
+    "express": "^4.17.1",
+    "sendgrid": "^4.2.0"
   },
   "engines": {
     "node": "10.x"
