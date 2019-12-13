@@ -5,7 +5,6 @@ var subject = 'Hello World from the SendGrid Node.js Library!';
 var content = new helper.Content('text/plain', 'Hello, Email!');
 var mail = new helper.Mail(from_email, subject, to_email, content);
 
-console.log(process.env.Yash);
 var sg = require('sendgrid')(process.env.SENDGRID_API_KEY);
 var request = sg.emptyRequest({
   method: 'POST',
@@ -13,11 +12,11 @@ var request = sg.emptyRequest({
   body: mail.toJSON(),
 });
 
-// sg.API(request, function(error, response) {
-//   console.log(response.statusCode);
-//   console.log(response.body);
-//   console.log(response.headers);
-// });
+sg.API(request, function(error, response) {
+  console.log(response.statusCode);
+  console.log(response.body);
+  console.log(response.headers);
+});
 
 const http = require('http');
 const PORT = process.env.PORT || 5000;
@@ -25,7 +24,7 @@ const PORT = process.env.PORT || 5000;
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World\n', process.env.Yash);
+  res.end('Hello World\n',);
 });
 server.listen(PORT, '0.0.0.0', () => {
   console.log(`Server running on ${PORT}/`);
