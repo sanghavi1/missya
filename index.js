@@ -30,6 +30,6 @@ app.post('/sendEmail', (req, res) => {
 });
 
 /* static files */
-app.use(express.static('static'));
+app.use(express.static(__dirname + '/static'));
 
 app.listen(PORT, () => console.log(`Example app listening on port ${PORT}!`))
