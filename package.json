@@ -12,6 +12,7 @@
   "dependencies": {
     "commander": "^3.0.1",
     "express": "^4.17.1",
+    "require": "^2.4.20",
     "sendgrid": "^4.2.0"
   },
   "engines": {
