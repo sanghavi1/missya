@@ -1,4 +1,8 @@
-function sendEmail(sg, helper){
+var sg = require('sendgrid')(process.env.SENDGRID_API_KEY);
+var helper = require('sendgrid').mail;
+
+
+function sendEmail(){
   var from_email = new helper.Email('test@example.com');
   var to_email = new helper.Email('ysanghavi1@gmail.com');
   var subject = 'Hello World from the SendGrid Node.js Library!';
