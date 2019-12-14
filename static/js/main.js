@@ -3,6 +3,8 @@ var helper = require('sendgrid').mail;
 
 
 function sendEmail(sendTo, message){
+  console.log(String(sendTo));
+  console.log(String(message));
   var from_email = new helper.Email('test@example.com');
   var to_email = new helper.Email(String(sendTo));
   var subject = 'Hello World from the SendGrid Node.js Library!';
