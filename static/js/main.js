@@ -2,11 +2,12 @@ var sg = require('sendgrid')(process.env.SENDGRID_API_KEY);
 var helper = require('sendgrid').mail;
 
 
-function sendEmail(){
+function sendEmail(sendTo, message){
+  console.log(sendTo, message);
   var from_email = new helper.Email('test@example.com');
-  var to_email = new helper.Email('ysanghavi1@gmail.com');
+  var to_email = new helper.Email(sendTo);
   var subject = 'Hello World from the SendGrid Node.js Library!';
-  var content = new helper.Content('text/plain', 'Hello, Email!');
+  var content = new helper.Content('text/plain', message);
   var mail = new helper.Mail(from_email, subject, to_email, content);
 
   var request = sg.emptyRequest({
@@ -14,8 +15,6 @@ function sendEmail(){
     path: '/v3/mail/send',
     body: mail.toJSON(),
   });
-
-  console.log("SOME SHT SENT");
 
   sg.API(request, function(error, response) {
     console.log(response.statusCode);
