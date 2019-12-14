@@ -15,7 +15,7 @@ function sendEmail(){
     body: mail.toJSON(),
   });
 
-  console.log(sg);
+  console.log("SOME SHT SENT");
 
   sg.API(request, function(error, response) {
     console.log(response.statusCode);
