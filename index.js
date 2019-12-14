@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
 app.post('/sendEmail', (req, res) => {
   sendEmail(req.body.sendTo, req.body.message);
   console.log("SEND");
-  res.send('POST request sent!')
+  res.end();
 });
 
 /* static files */
