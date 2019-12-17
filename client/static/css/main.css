@@ -1,0 +1,66 @@
+.lsd {
+  text-decoration: none;
+  text-transform: uppercase;
+  margin: 20px auto;
+  padding: 1em 1.5em;
+  border-radius: 8px;
+  background: center center no-repeat #000 url(https://attachments-staging.keyframes.net/media/cover/zlqfwz/b6eea0e0-a93f-434d-bfd1-3e1de3eac571.gif);
+  background-size: cover;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all ease 0.2s;
+  vertical-align: middle;
+  display: block;
+}
+
+.lsd:hover {
+  transform: scale(1.1);
+}
+
+.lsd:active {
+  transform: scale(0.9);
+}
+
+.formItem {
+  display: block;
+  background-color: #fff;
+  padding: 10px 0;
+  width: 90%;
+  max-width: 500px;
+  margin: 30px auto 0 auto;
+  border: none;
+  border-bottom: 2px solid #CED7DF;
+  border-radius: 0;
+  color: #32325D;
+  font-weight: 500;
+  font-family: 'Source Code Pro', Consolas, Menlo, monospace;
+  font-size: 16px;
+  font-smoothing: antialiased;
+}
+
+.formItem:focus,
+.formItem--focus {
+  outline: none;
+  border-bottom-color: #ccc;
+}
+
+.title {
+  color: #32325D;
+  font-weight: 500;
+  font-family: 'Source Code Pro', Consolas, Menlo, monospace;
+}
+
+.content {
+  display: block;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}

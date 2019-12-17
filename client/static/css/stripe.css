@@ -1,0 +1,33 @@
+body{
+  font-family: 'Montserrat', sans-serif;
+  margin:0;
+}
+
+#submit-stripe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  width: 50vw;
+  margin: 0 auto;
+}
+#submit-stripe .btn {
+  flex: 1 1 auto;
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+ /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+ }
+ #submit-stripe .btn:hover {
+  background-position: center; /* change the direction of the change here */
+}
+#submit-stripe .btn-2 {
+  background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%);
+}

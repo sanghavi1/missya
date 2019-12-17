@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/stripe.css">
+</head>
+
+<body>
+  <div class="content">
+    <h1 class="title"> Bitch I send EMAILS </h1>
+    <form action="/sendEmail" method="post">
+      <input type="text" name="sendTo" class="formItem" placeholder="Where should I send this?">
+      <br>
+      <input type="text" name="message" class="formItem" placeholder="What do you want to say?">
+      <br>
+      <input type="submit" value="submit" name="Submit" class="lsd" />
+    </form>
+    <div>
+      <form action="/charge" method="post" id="payment-form">
+        <div class="form-row">
+          <div id="card-element" class="formItem">
+            <!-- A Stripe Element will be inserted here. -->
+          </div>
+
+          <!-- Used to display Element errors. -->
+          <div id="card-errors" role="alert"></div>
+        </div>
+        <div id="submit-stripe">
+        <button class="btn btn-2">Give Yash a Dollar</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</body>
+<script src="https://js.stripe.com/v3/"></script>
+<script src="./js/stripeFields.js" charset="utf-8"></script>
+
+</html>

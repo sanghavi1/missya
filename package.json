@@ -15,7 +15,8 @@
     "express": "^4.17.1",
     "multer": "^1.4.2",
     "require": "^2.4.20",
-    "sendgrid": "^4.2.0"
+    "sendgrid": "^4.2.0",
+    "stripe": "^7.14.0"
   },
   "engines": {
     "node": "10.x"
