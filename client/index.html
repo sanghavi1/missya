@@ -10,28 +10,23 @@
 
 <body>
   <div class="content">
-    <h1 class="title"> Bitch I send EMAILS </h1>
-    <form action="/sendEmail" method="post">
-      <input type="text" name="sendTo" class="formItem" placeholder="Where should I send this?">
-      <br>
-      <input type="text" name="message" class="formItem" placeholder="What do you want to say?">
-      <br>
-      <input type="submit" value="submit" name="Submit" class="lsd" />
-    </form>
+    <h1 class="title"> Pennies for your thoughts </h1>
+    <h3> And see those of others </h3>
+    <h4> For 99 cents! </h4>
     <div>
       <form action="/charge" method="post" id="payment-form">
+        <textarea type="text" name="message" class="formItem" placeholder="What are your thoughts?">
+        </textarea>
         <div class="form-row">
           <div id="card-element" class="formItem">
             <!-- A Stripe Element will be inserted here. -->
           </div>
-
           <!-- Used to display Element errors. -->
           <div id="card-errors" role="alert"></div>
         </div>
         <div id="submit-stripe">
-        <button class="btn btn-2">Give Yash a Dollar</button>
+        <button class="btn btn-2">Submit your thoughts</button>
         </div>
-
       </form>
     </div>
   </div>
