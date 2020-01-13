@@ -19,7 +19,7 @@ var serviceAccount = {
   "type": "service_account",
   "project_id": "penniesforyourthoughts-d68a9",
   "private_key_id": "f7c554e6e55a63b10131881524fbee918afb54aa",
-  "private_key": process.env.FIREBASE_CONFIG,
+  "private_key": process.env.FIREBASE_CONFIG.replace(/\\n/g, '\n'),
   "client_email": process.env.FIREBASE_CONFIG_CLIENT_EMAIL,
   "client_id": "104550988597223846377",
   "auth_uri": "https://accounts.google.com/o/oauth2/auth",
