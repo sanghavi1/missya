@@ -3,7 +3,7 @@
 const express = require('express');
 const app = express();
 const sendMessageToFirebase = require('./server/sendMessageToFirebase.js');
-const stripe = require('stripe')(process.env.STRIPE_LIVE_KEY);
+const stripe = require('stripe')(process.env.STRIPE_KEY);
 const http = require('http');
 const PORT = process.env.PORT || 5000;
 
