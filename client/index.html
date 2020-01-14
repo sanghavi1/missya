@@ -3,35 +3,69 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title></title>
+  <link rel="stylesheet" type="text/css" href="css/bulma.css">
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <link rel="stylesheet" type="text/css" href="css/stripe.css">
 </head>
 
 <body>
-  <div class="content">
-    <h1 class="title"> Pennies for your thoughts </h1>
-    <h3> And see those of others </h3>
-    <h4> For 99 cents! </h4>
-    <div>
-      <form action="/charge" method="post" id="payment-form">
-        <textarea type="text" name="message" class="formItem" placeholder="What are your thoughts?">
-        </textarea>
-        <div class="form-row">
-          <div id="card-element" class="formItem">
-            <!-- A Stripe Element will be inserted here. -->
+  <section class="hero is-fullheight has-background has-text-centered has-bg-img">
+    <div class="hero-body">
+      <div class="container">
+        <div class="box">
+          <h1 class="title is-2 is-family-monospace ">
+           Pennies for your thoughts
+         </h1>
+         <h2 class="subtitle is-family-monospace ">
+           Submit yours and read another's for 99 cents
+         </h2>
+          <div>
+            <form class="control" action="/charge" method="post" id="payment-form">
+              <field>
+                <div class="control">
+                  <textarea type="text" name="message" class="textarea"
+                  placeholder="So you're finally here, huh? Why don't you tell me what you're thinking and I'll share some secrets that others have told me."></textarea>
+                </div>
+              </field>
+              <div class="form-row">
+                <div id="card-element" class="formItem">
+                  <!-- A Stripe Element will be inserted here. -->
+                </div>
+                <!-- Used to display Element errors. -->
+                <div id="card-errors" role="alert"></div>
+              </div>
+              <br>
+              <field>
+              <div id="submit-stripe" class="control">
+                <button class="btn btn-2">Submit your thoughts</button>
+              </div>
+            </field>
+            </form>
           </div>
-          <!-- Used to display Element errors. -->
-          <div id="card-errors" role="alert"></div>
         </div>
-        <div id="submit-stripe">
-        <button class="btn btn-2">Submit your thoughts</button>
-        </div>
-      </form>
+      </div>
     </div>
-  </div>
+    <div>
+      <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px"
+        href="https://unsplash.com/@anniespratt?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer"
+        title="Download free do whatever you want high-resolution photos from Annie Spratt">
+        <span style="display:inline-block;padding:2px 3px">
+          <svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32">
+            <title>unsplash-logo</title>
+            <path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z">
+            </path>
+          </svg>
+        </span>
+        <span style="display:inline-block;padding:2px 3px">Annie Spratt</span>
+      </a>
+    </div>
+  </section>
+
 </body>
 <script src="https://js.stripe.com/v3/"></script>
 <script src="./js/stripeFields.js" charset="utf-8"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 
 </html>
