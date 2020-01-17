@@ -8,16 +8,22 @@
   border-bottom: 2px solid #CED7DF;
   border-radius: 0;
   font-weight: 500;
-  font-family: 'Source Code Pro', Consolas, Menlo, monospace;
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-smoothing: antialiased;
   border-bottom-color: #ccc;
 }
-
+.withSpace{
+  margin-bottom: 1.7rem !important;
+}
 .formItem:focus,
 .formItem--focus {
   outline: none;
   border-bottom-color: #ccc;
+}
+
+.italic {
+  font-style: italic;
 }
 
 .is-white {

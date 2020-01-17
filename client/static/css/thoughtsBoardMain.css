@@ -1,3 +1,11 @@
 .thoughtItem {
   padding-bottom: 12px;
 }
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.italic {
+  font-style: italic;
+}
