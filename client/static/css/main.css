@@ -30,4 +30,10 @@
 .textarea {
   max-width: 200px;
 }
-.has-bg-img { background: url('../mainBackDrop.jpg')center center; background-size:cover; }
+.has-bg-img {
+  background: url('../mainBackDrop.jpg')center center;
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #464646;
+}

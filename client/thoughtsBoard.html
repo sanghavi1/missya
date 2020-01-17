@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Pennies For Your Thoughts</title>
-  </head>
-  <body>
-    <h1> You made it. </h1>
-    <div id="thoughtsBoard">
+
+<head>
+  <meta charset="utf-8">
+  <title>Pennies For Your Thoughts</title>
+  <link rel="stylesheet" type="text/css" href="css/bulma.css">
+  <link rel="stylesheet" type="text/css" href="css/thoughtsBoardMain.css">
+</head>
+
+<body>
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <h1 class="title">
+          You made it.
+        </h1>
+        <h2 class="subtitle">
+          Time to get what you paid for...
+        </h2>
+      </div>
     </div>
-  </body>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="./js/getThoughts.js" charset="utf-8"></script>
+  </section>
+  <div id="thoughtsBoard">
+  </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="./js/getThoughts.js" charset="utf-8"></script>
+
 </html>
