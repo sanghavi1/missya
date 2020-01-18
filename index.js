@@ -70,8 +70,6 @@ app.get('/', (req, res) => {
 /* Everything Related to Stripe API */
 app.post('/charge', (req, res) => {
 
-  sendMessageToFirebase(admin, req.body.message);
-
   const token = req.body.stripeToken; // Using Express
 
   (async () => {
@@ -85,6 +83,7 @@ app.post('/charge', (req, res) => {
       if(err){
         res.send("Something went wrong. Don't worry, you weren't charged.")
       }
+      sendMessageToFirebase(admin, req.body.message);
       res.sendFile(path.join(__dirname + '/client/thoughtsBoard.html'));
     });
   })();
